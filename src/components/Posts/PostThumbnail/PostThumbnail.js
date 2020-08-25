@@ -7,7 +7,7 @@ const PostThumbnail = props => {
     return (
         <article className="Post-thumbnail">
             <header className="Post-thumbnail__header">
-                <p className="Post-thumbnail__date">Created on: <span><Moment format="DD.MM.YYYY HH.mm">{props.date}</Moment></span></p>
+                <p className="Post-thumbnail__date">Created on: <span><Moment format="DD.MM.YYYY HH:mm">{props.date}</Moment></span></p>
             </header>
             <div className="Post-thumbnail__body">
                 <p className="Post-thumbnail__text">{props.description}</p>
