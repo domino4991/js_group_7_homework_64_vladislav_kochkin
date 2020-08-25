@@ -19,12 +19,10 @@ const AddPostsPage = () => {
 
     const onSubmitNewPostForm = async e => {
         e.preventDefault();
-
         const newPost = {
             ...post,
             date: new Date()
         };
-
         try {
             await axiosPosts.post('/posts.json', newPost);
         } finally {
@@ -53,6 +51,7 @@ const AddPostsPage = () => {
                         id="title-input"
                         onChange={e => onChangeFieldPostForm(e)}
                     />
+                    <label htmlFor="description">Description</label>
                     <textarea
                         name="description"
                         placeholder="Enter your description..."
