@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './AddPostsPage.css';
 import axiosPosts from "../../axiosPosts";
+import PostForm from "../../components/PostForm/PostForm";
 
 const AddPostsPage = () => {
     const [post, setPost] = useState({
@@ -38,29 +39,12 @@ const AddPostsPage = () => {
         <section className="Add-post-section">
             <div className="container">
                 <h3 className="Add-post-section__title">Add new post</h3>
-                <form
-                    className="Add-post-section__form"
-                    onSubmit={(e) => onSubmitNewPostForm(e)}
-                >
-                    <label htmlFor="title-input">Title</label>
-                    <input
-                        name="title"
-                        placeholder="Enter post title..."
-                        type="text"
-                        className="field"
-                        id="title-input"
-                        onChange={e => onChangeFieldPostForm(e)}
-                    />
-                    <label htmlFor="description">Description</label>
-                    <textarea
-                        name="description"
-                        placeholder="Enter your description..."
-                        id="description"
-                        className="field field-desc"
-                        onChange={e => onChangeFieldPostForm(e)}
-                    />
-                    <button type="submit" className="Add-post-section__btn-send">Add</button>
-                </form>
+                <PostForm
+                    submit={e => onSubmitNewPostForm(e)}
+                    title={post.title}
+                    description={post.description}
+                    changeField={e => onChangeFieldPostForm(e)}
+                />
             </div>
         </section>
     );
