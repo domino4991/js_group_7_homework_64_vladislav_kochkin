@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import './HomePage.css';
-import Posts from "../../components/Header/Posts/Posts";
+import Posts from "../../components/Posts/Posts";
 import axiosPosts from "../../axiosPosts";
 
 const HomePage = () => {
