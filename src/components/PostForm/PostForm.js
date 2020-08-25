@@ -26,7 +26,7 @@ const PostForm = props => {
                 className="field field-desc"
                 onChange={props.changeField}
             />
-            <button type="submit" className="Post-form__btn-send">Add</button>
+            <button type="submit" className="Post-form__btn-send Button">Add</button>
         </form>
     );
 };

@@ -46,8 +46,8 @@ const FullPost = props => {
                             <p className="Full-post__text">{fullPost.description}</p>
                         </div>
                         <footer className="Full-post__footer">
-                            <button type="button" className="Full-post__del-btn Full-post__btn" onClick={deletePost}>Delete</button>
-                            <NavLink to={`/post/${props.match.params.id}/edit`} className="Full-post__edit-btn Full-post__btn">Edit</NavLink>
+                            <button type="button" className="Full-post__del-btn Links" onClick={deletePost}>Delete</button>
+                            <NavLink to={`/post/${props.match.params.id}/edit`} className="Links">Edit</NavLink>
                         </footer>
                     </article>
 

@@ -36,13 +36,5 @@
 }
 
 .Post-form__btn-send {
-    background: #009688;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    color: #eceff1;
-    text-transform: uppercase;
-    font-weight: bold;
-    cursor: pointer;
     margin-left: auto;
 }

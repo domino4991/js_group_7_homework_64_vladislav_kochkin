@@ -13,7 +13,7 @@ const PostThumbnail = props => {
                 <p className="Post-thumbnail__text">{props.description}</p>
             </div>
             <footer className="Post-thumbnail__footer">
-                <NavLink to={`/post/${props.id}`} className="Post-thumbnail__link">Read more</NavLink>
+                <NavLink to={`/post/${props.id}`} className="Links">Read more</NavLink>
             </footer>
         </article>
     );

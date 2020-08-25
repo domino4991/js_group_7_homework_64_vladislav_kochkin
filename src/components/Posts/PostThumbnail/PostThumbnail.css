@@ -27,21 +27,3 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
-
-.Post-thumbnail__link {
-    background: #009688;
-    font-size: 13px;
-    border: none;
-    text-decoration: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    color: #eceff1;
-    text-transform: uppercase;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.5s;
-}
-
-.Post-thumbnail__link:hover {
-    background: #00796b;
-}

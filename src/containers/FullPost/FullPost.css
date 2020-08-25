@@ -34,18 +34,11 @@
     justify-content: flex-end;
 }
 
-.Full-post__btn {
-    background: #009688;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    color: #eceff1;
-    text-transform: uppercase;
-    font-weight: bold;
-    cursor: pointer;
-}
-
 .Full-post__del-btn {
     background: #0277bd;
     margin-right: 20px;
+}
+
+.Full-post__del-btn:hover {
+    background: #03a9f4;
 }
