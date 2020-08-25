@@ -1,0 +1,39 @@
+.Post-thumbnail {
+    width: 25%;
+    border-bottom: 5px solid #009688;
+    box-shadow: 0 2px 3px 1px rgba(38, 50, 56, 0.2);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.Post-thumbnail__date {
+    color: #bdbdbd;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #bdbdbd;
+    padding: 10px 0;
+}
+
+.Post-thumbnail__date span {
+    font-weight: normal;
+}
+
+.Post-thumbnail__text {
+    font-size: 16px;
+    margin-bottom: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.Post-thumbnail__btn {
+    background: #009688;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    color: #eceff1;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}
