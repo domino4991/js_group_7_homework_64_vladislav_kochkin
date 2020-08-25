@@ -2,16 +2,22 @@ import React, {useEffect, useState} from 'react';
 import './EditPostPage.css';
 import PostForm from "../../components/PostForm/PostForm";
 import axiosPosts from "../../axiosPosts";
+import {Sugar} from "react-preloaders";
 
 const EditPostPage = props => {
     const [editPostData, setEditPostData] = useState(null);
+    const [loading, setLoading] = useState(true);
 
     const id = props.match.params.id;
 
     useEffect(() => {
         const getPost = async () => {
-            const postResponse = await axiosPosts.get(`/posts/${id}.json`);
-            setEditPostData(postResponse.data);
+            try {
+                const postResponse = await axiosPosts.get(`/posts/${id}.json`);
+                setEditPostData(postResponse.data);
+            } finally {
+                setLoading(false);
+            }
         }
         getPost().catch(console.error);
     }, [id]);
@@ -48,7 +54,12 @@ const EditPostPage = props => {
                     description={editPostData.description}
                     submit={e => onSubmitEditPost(e)}
                     changeField={e => onChangeEditPost(e)}
-                /> : <p>Загрузка</p>}
+                /> : <Sugar
+                        customLoading={loading}
+                        background={'#00897b'}
+                        color={'#e0f2f1'}
+                    />
+                }
             </div>
         </section>
     );

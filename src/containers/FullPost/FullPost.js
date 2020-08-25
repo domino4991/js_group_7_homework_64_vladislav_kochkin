@@ -2,15 +2,21 @@ import React, {useEffect, useState} from 'react';
 import './FullPost.css';
 import axiosPosts from "../../axiosPosts";
 import {NavLink} from "react-router-dom";
+import {Sugar} from "react-preloaders";
 
 const FullPost = props => {
     const [fullPost, setFullPost] = useState(null);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const id = props.match.params.id;
         const getFullPost = async () => {
-            const fullPostResponse = await axiosPosts.get(`/posts/${id}.json`);
-            setFullPost(fullPostResponse.data);
+            try {
+                const fullPostResponse = await axiosPosts.get(`/posts/${id}.json`);
+                setFullPost(fullPostResponse.data);
+            } finally {
+                setLoading(false);
+            }
         }
         getFullPost().catch(console.error);
     }, [props.match.params.id]);
@@ -44,7 +50,12 @@ const FullPost = props => {
                         </footer>
                     </article>
 
-                ) : <p>Загрузка</p>}
+                ) : <Sugar
+                        customLoading={loading}
+                        background={'#00897b'}
+                        color={'#e0f2f1'}
+                    />
+                }
             </div>
         </section>
     );
