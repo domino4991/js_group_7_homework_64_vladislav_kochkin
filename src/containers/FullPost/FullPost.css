@@ -1,0 +1,51 @@
+.Full-post {
+    padding: 0 20px;
+    color: #263238;
+    width: 600px;
+    margin: 0 auto;
+    border-left: 10px solid #009688;
+}
+
+.Full-post__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+.Full-post__title {
+    font-size: 22px;
+}
+
+.Full-post__date {
+    font-size: 14px;
+    color: #bdbdbd;
+}
+
+.Full-post__body {
+    padding: 30px 0;
+}
+
+.Full-post__footer {
+    border-top: 1px solid #e0e0e0;
+    padding: 20px 0 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.Full-post__btn {
+    background: #009688;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    color: #eceff1;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.Full-post__del-btn {
+    background: #0277bd;
+    margin-right: 20px;
+}
