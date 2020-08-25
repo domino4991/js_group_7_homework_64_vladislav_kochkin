@@ -1,0 +1,30 @@
+.Nav-menu__list {
+    list-style: none;
+    padding: 0;
+}
+
+.Nav-menu__item {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.Nav-menu__item:last-child {
+    margin: 0;
+}
+
+.Nav-menu__link {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #eceff1;
+    padding: 10px;
+    display: block;
+    transition: 0.5s;
+}
+
+.Nav-menu__link:hover {
+    color: #009688;
+}
+
+.Nav-menu__link_active {
+    color: #009688;
+}
