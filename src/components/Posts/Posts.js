@@ -11,6 +11,7 @@ const Posts = props => {
                         key={item.id}
                         description={item.description}
                         date={item.date}
+                        id={item.id}
                     />) : <p>Постов нет</p>}
                 </div>
             </div>

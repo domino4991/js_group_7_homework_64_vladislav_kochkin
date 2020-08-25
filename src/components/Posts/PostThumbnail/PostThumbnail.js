@@ -1,5 +1,6 @@
 import React from 'react';
 import './PostThumbnail.css';
+import {NavLink} from "react-router-dom";
 
 const PostThumbnail = props => {
     return (
@@ -11,7 +12,7 @@ const PostThumbnail = props => {
                 <p className="Post-thumbnail__text">{props.description}</p>
             </div>
             <footer className="Post-thumbnail__footer">
-                <button type="button" className="Post-thumbnail__btn">Read more</button>
+                <NavLink to={`/post/${props.id}`} className="Post-thumbnail__link">Read more</NavLink>
             </footer>
         </article>
     );

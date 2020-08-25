@@ -1,9 +1,10 @@
 .Post-thumbnail {
-    width: 30%;
+    width: 46%;
     border-bottom: 5px solid #009688;
     box-shadow: 0 2px 3px 1px rgba(38, 50, 56, 0.2);
     border-radius: 10px;
     padding: 15px;
+    margin-bottom: 30px;
 }
 
 .Post-thumbnail__date {
@@ -27,13 +28,20 @@
     text-overflow: ellipsis;
 }
 
-.Post-thumbnail__btn {
+.Post-thumbnail__link {
     background: #009688;
+    font-size: 13px;
     border: none;
+    text-decoration: none;
     border-radius: 5px;
     padding: 10px 15px;
     color: #eceff1;
     text-transform: uppercase;
     font-weight: bold;
     cursor: pointer;
+    transition: 0.5s;
+}
+
+.Post-thumbnail__link:hover {
+    background: #00796b;
 }
