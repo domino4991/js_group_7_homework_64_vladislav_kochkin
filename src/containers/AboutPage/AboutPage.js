@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import './AboutPage.css';
 import axiosPosts from "../../axiosPosts";
 import {Sugar} from "react-preloaders";
-import ChangeAboutForm from "../../components/ChangeAboutForm/ChangeAboutForm";
+import ChangeForm from "../../components/ChangeForm/ChangeForm";
 
 const AboutPage = () => {
     const [about, setAbout] = useState({});
@@ -43,11 +43,11 @@ const AboutPage = () => {
     const onShowFormHandler = e => {
         e.preventDefault();
         setShowForm(!showForm);
-    }
+    };
 
     return (
         <section className="About-page-section">
-            <ChangeAboutForm
+            <ChangeForm
                 show={showForm}
                 title={about.title}
                 name={about.name}
@@ -55,6 +55,7 @@ const AboutPage = () => {
                 changed={e => onChangeAbout(e)}
                 submit={e => onSubmitChangedForm(e)}
                 clicked={e => onShowFormHandler(e)}
+                page="about"
             />
             <Sugar
                 customLoading={loading}
