@@ -45,8 +45,20 @@ const EditPostPage = props => {
         }));
     }
 
+    const onChangeDescription = editor => {
+        setEditPostData(prevState => ({
+            ...prevState,
+            description: editor
+        }))
+    }
+
     return (
         <section className="Edit-post-section">
+            <Sugar
+                customLoading={loading}
+                background={'#00897b'}
+                color={'#e0f2f1'}
+            />
             <div className="container">
                 <h3 className="Edit-post__title">Edit post</h3>
                 {editPostData !== null ? <PostForm
@@ -54,12 +66,8 @@ const EditPostPage = props => {
                     description={editPostData.description}
                     submit={e => onSubmitEditPost(e)}
                     changeField={e => onChangeEditPost(e)}
-                /> : <Sugar
-                        customLoading={loading}
-                        background={'#00897b'}
-                        color={'#e0f2f1'}
-                    />
-                }
+                    changed={onChangeDescription}
+                /> : null}
             </div>
         </section>
     );

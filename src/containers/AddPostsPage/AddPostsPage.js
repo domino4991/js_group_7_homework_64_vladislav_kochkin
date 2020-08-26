@@ -3,7 +3,7 @@ import './AddPostsPage.css';
 import axiosPosts from "../../axiosPosts";
 import PostForm from "../../components/PostForm/PostForm";
 
-const AddPostsPage = () => {
+const AddPostsPage = props => {
     const [post, setPost] = useState({
        title: '',
        description: ''
@@ -18,8 +18,16 @@ const AddPostsPage = () => {
         }));
     };
 
+    const onChangeDescription = (editor) => {
+        setPost(prevState => ({
+            ...prevState,
+            description: editor
+        }));
+    }
+
     const onSubmitNewPostForm = async e => {
         e.preventDefault();
+        if(post.description === '') return;
         const newPost = {
             ...post,
             date: new Date()
@@ -31,6 +39,7 @@ const AddPostsPage = () => {
                 title: '',
                 description: ''
             });
+            props.history.replace('/');
         }
     }
 
@@ -44,6 +53,7 @@ const AddPostsPage = () => {
                     title={post.title}
                     description={post.description}
                     changeField={e => onChangeFieldPostForm(e)}
+                    changed={onChangeDescription}
                 />
             </div>
         </section>
