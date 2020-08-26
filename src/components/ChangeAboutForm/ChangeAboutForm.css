@@ -22,6 +22,7 @@
     flex-direction: column;
     width: 500px;
     transition: 0.5s;
+    border-radius: 10px;
 }
 
 .Change-form__field {
