@@ -3,7 +3,7 @@
     border-bottom: 5px solid #009688;
     box-shadow: 0 2px 3px 1px rgba(38, 50, 56, 0.2);
     border-radius: 10px;
-    padding: 15px;
+    padding: 15px 15px 30px;
     margin-bottom: 30px;
 }
 
@@ -20,10 +20,14 @@
     font-weight: normal;
 }
 
-.Post-thumbnail__text {
+.Post-thumbnail__body {
     font-size: 16px;
     margin-bottom: 20px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.Post-thumbnail__footer {
+    text-align: right;
 }

@@ -4,6 +4,7 @@ import axiosPosts from "../../axiosPosts";
 import {NavLink} from "react-router-dom";
 import {Sugar} from "react-preloaders";
 import Moment from "react-moment";
+import ReactHtmlParser from 'react-html-parser';
 
 const FullPost = props => {
     const [fullPost, setFullPost] = useState(null);
@@ -26,8 +27,6 @@ const FullPost = props => {
         const id = props.match.params.id;
         try {
             await axiosPosts.delete(`/posts/${id}.json`);
-        } catch {
-            console.log('error');
         } finally {
             props.history.replace('/');
         }
@@ -35,6 +34,11 @@ const FullPost = props => {
 
     return (
         <section className="Full-post-section">
+            <Sugar
+                customLoading={loading}
+                background={'#00897b'}
+                color={'#e0f2f1'}
+            />
             <div className="container">
                 {fullPost !== null ? (
                     <article className="Full-post">
@@ -43,7 +47,7 @@ const FullPost = props => {
                             <span className="Full-post__date"><Moment format="DD.MM.YYYY HH:mm">{fullPost.date}</Moment></span>
                         </header>
                         <div className="Full-post__body">
-                            <p className="Full-post__text">{fullPost.description}</p>
+                            {ReactHtmlParser(fullPost.description)}
                         </div>
                         <footer className="Full-post__footer">
                             <button type="button" className="Full-post__del-btn Links" onClick={deletePost}>Delete</button>
@@ -51,12 +55,7 @@ const FullPost = props => {
                         </footer>
                     </article>
 
-                ) : <Sugar
-                        customLoading={loading}
-                        background={'#00897b'}
-                        color={'#e0f2f1'}
-                    />
-                }
+                ) : null}
             </div>
         </section>
     );
