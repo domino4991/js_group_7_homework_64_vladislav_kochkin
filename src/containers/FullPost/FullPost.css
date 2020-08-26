@@ -21,6 +21,14 @@
 .Full-post__date {
     font-size: 14px;
     color: #bdbdbd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Full-post__date span {
+    font-size: 16px;
+    margin-right: 10px;
 }
 
 .Full-post__body {

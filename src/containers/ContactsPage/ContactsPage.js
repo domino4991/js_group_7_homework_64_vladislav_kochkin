@@ -4,6 +4,10 @@ import axiosPosts from "../../axiosPosts";
 import {Sugar} from "react-preloaders";
 import ChangeForm from "../../components/ChangeForm/ChangeForm";
 
+import {BsPhone} from "react-icons/bs";
+import {AiFillMail} from "react-icons/ai";
+import {GrMapLocation} from "react-icons/gr";
+
 const ContactsPage = () => {
     const [contacts, setContacts] = useState({});
     const [loading, setLoading] = useState(true);
@@ -70,13 +74,13 @@ const ContactsPage = () => {
                     <p className="Contacts__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus assumenda dolor doloribus ducimus eligendi illo inventore molestias ullam voluptates. Aperiam et ipsum mollitia nesciunt quidem repellat tempore voluptate. Eum, laudantium.</p>
                     <ul className="Contacts__list">
                         <li className="Contacts__item">
-                            {contacts.phone}
+                            <span><BsPhone /></span>{contacts.phone}
                         </li>
                         <li className="Contacts__item">
-                            {contacts.email}
+                            <span><AiFillMail /></span>{contacts.email}
                         </li>
                         <li className="Contacts__item">
-                            {contacts.address}
+                            <span><GrMapLocation /></span>{contacts.address}
                         </li>
                     </ul>
                     <button className="Button" type="button" onClick={onShowFormHandler}>Edit contacts</button>

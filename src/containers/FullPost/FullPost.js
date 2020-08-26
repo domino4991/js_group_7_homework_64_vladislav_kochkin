@@ -6,6 +6,8 @@ import {Sugar} from "react-preloaders";
 import Moment from "react-moment";
 import ReactHtmlParser from 'react-html-parser';
 
+import {BiTime} from "react-icons/bi";
+
 const FullPost = props => {
     const [fullPost, setFullPost] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -44,7 +46,7 @@ const FullPost = props => {
                     <article className="Full-post">
                         <header className="Full-post__header">
                             <h3 className="Full-post__title">{fullPost.title}</h3>
-                            <span className="Full-post__date"><Moment format="DD.MM.YYYY HH:mm">{fullPost.date}</Moment></span>
+                            <p className="Full-post__date"><span><BiTime /></span><Moment format="DD.MM.YYYY HH:mm">{fullPost.date}</Moment></p>
                         </header>
                         <div className="Full-post__body">
                             {ReactHtmlParser(fullPost.description)}
