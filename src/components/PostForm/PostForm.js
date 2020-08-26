@@ -1,5 +1,10 @@
 import React from 'react';
 import './PostForm.css';
+import 'froala-editor/css/froala_style.min.css';
+import 'froala-editor/css/froala_editor.pkgd.min.css';
+import 'froala-editor/js/plugins.pkgd.min.js';
+
+import FroalaEditorComponent from 'react-froala-wysiwyg';
 
 const PostForm = props => {
     return (
@@ -16,15 +21,13 @@ const PostForm = props => {
                 id="title-input"
                 value={props.title}
                 onChange={props.changeField}
+                required
             />
-            <label htmlFor="description">Description</label>
-            <textarea
-                name="description"
-                placeholder="Enter your description..."
-                id="description"
-                value={props.description}
-                className="field field-desc"
-                onChange={props.changeField}
+            <h5 className="Post-form__label">Description</h5>
+            <FroalaEditorComponent
+                tag="textarea"
+                model={props.description}
+                onModelChange={props.changed}
             />
             <button type="submit" className="Post-form__btn-send Button">Add</button>
         </form>

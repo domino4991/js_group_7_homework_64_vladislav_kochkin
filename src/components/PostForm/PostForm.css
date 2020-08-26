@@ -7,6 +7,13 @@
 
 .Post-form label {
     margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.Post-form__label {
+    margin-bottom: 15px;
+    font-weight: normal;
+    font-size: 16px;
 }
 
 .field {
@@ -36,5 +43,9 @@
 }
 
 .Post-form__btn-send {
-    margin-left: auto;
+    margin: 20px 0 0 auto;
+}
+
+.fr-wrapper {
+    height: 150px;
 }
