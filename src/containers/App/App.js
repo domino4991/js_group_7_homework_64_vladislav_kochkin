@@ -7,6 +7,7 @@ import HomePage from "../HomePage/HomePage";
 import FullPost from "../FullPost/FullPost";
 import EditPostPage from "../EditPostPage/EditPostPage";
 import AboutPage from "../AboutPage/AboutPage";
+import ContactsPage from "../ContactsPage/ContactsPage";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
               <Route path="/post/:id" exact component={FullPost} />
               <Route path="/post/:id/edit" component={EditPostPage} />
               <Route path="/about" component={AboutPage} />
+              <Route path="/contacts" component={ContactsPage} />
           </Switch>
       </BrowserRouter>
     </div>
