@@ -3,6 +3,7 @@ import './Posts.css';
 import PostThumbnail from "./PostThumbnail/PostThumbnail";
 
 const Posts = props => {
+    let duration = props.durationTime;
     return (
         <section className="Posts-section">
             <div className="container">
@@ -13,6 +14,8 @@ const Posts = props => {
                         description={item.description}
                         date={item.date}
                         id={item.id}
+                        duration={duration += 0.6}
+                        loading={props.loading}
                     />) : <p>Постов нет</p>}
                 </div>
             </div>

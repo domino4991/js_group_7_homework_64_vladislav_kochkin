@@ -7,6 +7,8 @@
     margin-bottom: 30px;
     display: flex;
     flex-direction: column;
+    transform: translateX(2000px) scale(0);
+    animation: showPost 0.5s forwards;
 }
 
 .Post-thumbnail__date {
@@ -33,4 +35,13 @@
 
 .Post-thumbnail__footer {
     text-align: right;
+}
+
+@keyframes showPost {
+    50% {
+        transform: translateX(900px) scale(0.5);
+    }
+    100% {
+        transform: translateX(0) scale(1);
+    }
 }

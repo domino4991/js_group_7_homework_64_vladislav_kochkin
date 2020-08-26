@@ -4,6 +4,9 @@ import Posts from "../../components/Posts/Posts";
 import axiosPosts from "../../axiosPosts";
 import {Sugar} from 'react-preloaders';
 
+let durationTime = 0;
+const time = window.performance.getEntriesByType('navigation');
+
 const HomePage = () => {
     const [posts, setPosts] = useState([]);
 
@@ -20,6 +23,7 @@ const HomePage = () => {
                     }));
                 setPosts(postsCopy);
             } finally {
+                durationTime = time[0].responseEnd - time[0].responseStart;
                 setLoading(false);
             }
         }
@@ -35,7 +39,11 @@ const HomePage = () => {
                 background={'#00897b'}
                 color={'#e0f2f1'}
             />
-            <Posts posts={posts}/>
+            <Posts
+                posts={posts}
+                loading={loading}
+                durationTime={Math.round(durationTime)}
+            />
         </>
     );
 };

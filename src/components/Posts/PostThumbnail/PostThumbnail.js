@@ -6,7 +6,7 @@ import ReactHtmlParser from 'react-html-parser';
 
 const PostThumbnail = props => {
     return (
-        <article className="Post-thumbnail">
+        <article className="Post-thumbnail" style={{animationDuration: `${props.duration}s`}}>
             <header className="Post-thumbnail__header">
                 <p className="Post-thumbnail__date">Created on: <span><Moment format="DD.MM.YYYY HH:mm">{props.date}</Moment></span></p>
             </header>
