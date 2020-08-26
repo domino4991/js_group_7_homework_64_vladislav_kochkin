@@ -31,3 +31,10 @@
 .Button:hover {
   background: #00796b;
 }
+
+.Titles {
+  text-align: center;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}

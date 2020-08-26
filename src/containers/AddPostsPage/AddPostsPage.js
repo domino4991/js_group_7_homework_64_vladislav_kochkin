@@ -47,7 +47,7 @@ const AddPostsPage = props => {
     return (
         <section className="Add-post-section">
             <div className="container">
-                <h3 className="Add-post-section__title">Add new post</h3>
+                <h3 className="Titles">Add new post</h3>
                 <PostForm
                     submit={e => onSubmitNewPostForm(e)}
                     title={post.title}

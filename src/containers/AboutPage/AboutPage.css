@@ -1,0 +1,24 @@
+.About-article {
+    width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border-left: 4px solid rgba(0, 150, 136, 0.7);
+    box-shadow: 2px 1px 3px 1px rgba(0, 150, 136, 0.7);
+    border-radius: 10px;
+    color: #263238;
+}
+
+.About-article__body {
+    margin-bottom: 20px;
+}
+
+.About-article__footer {
+    text-align: right;
+}
+
+.Footer__author {
+    font-size: 14px;
+    margin-bottom: 20px;
+}

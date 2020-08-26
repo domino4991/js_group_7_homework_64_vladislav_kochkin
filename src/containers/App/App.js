@@ -6,6 +6,7 @@ import Header from "../../components/Header/Header";
 import HomePage from "../HomePage/HomePage";
 import FullPost from "../FullPost/FullPost";
 import EditPostPage from "../EditPostPage/EditPostPage";
+import AboutPage from "../AboutPage/AboutPage";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
               <Route path="/add-post" component={AddPostsPage} />
               <Route path="/post/:id" exact component={FullPost} />
               <Route path="/post/:id/edit" component={EditPostPage} />
+              <Route path="/about" component={AboutPage} />
           </Switch>
       </BrowserRouter>
     </div>

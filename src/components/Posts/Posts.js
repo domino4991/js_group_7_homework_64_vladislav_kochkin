@@ -6,6 +6,7 @@ const Posts = props => {
     return (
         <section className="Posts-section">
             <div className="container">
+                <h3 className="Titles">Posts</h3>
                 <div className="Posts">
                     {props.posts.length !== 0 ? props.posts.map(item => <PostThumbnail
                         key={item.id}
