@@ -7,8 +7,10 @@ import ReactHtmlParser from 'react-html-parser';
 import {BiTime} from "react-icons/bi";
 
 const PostThumbnail = props => {
+    let duration = props.duration > 7 ? 1.3 : props.duration;
+
     return (
-        <article className="Post-thumbnail" style={{animationDuration: `${props.duration}s`}}>
+        <article className="Post-thumbnail" style={{animationDuration: `${duration}s`}}>
             <header className="Post-thumbnail__header">
                 <p className="Post-thumbnail__date"><span><BiTime /></span>Created on: <Moment format="DD.MM.YYYY HH:mm">{props.date}</Moment></p>
             </header>

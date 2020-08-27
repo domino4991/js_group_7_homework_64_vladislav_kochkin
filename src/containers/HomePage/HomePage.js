@@ -4,8 +4,9 @@ import Posts from "../../components/Posts/Posts";
 import axiosPosts from "../../axiosPosts";
 import {Sugar} from 'react-preloaders';
 
-let durationTime = 0;
-const time = window.performance.getEntriesByType('navigation');
+let durationTime = 0.7;
+let startQuery = null;
+let endQuery = null;
 
 const HomePage = () => {
     const [posts, setPosts] = useState([]);
@@ -15,6 +16,7 @@ const HomePage = () => {
     useEffect(() => {
         const getPosts = async () => {
             try {
+                startQuery = new Date().getTime();
                 const postsResponse = await axiosPosts.get('/posts.json');
                 const postsCopy = Object.keys(postsResponse.data)
                     .map(item => ({
@@ -23,7 +25,8 @@ const HomePage = () => {
                     }));
                 setPosts(postsCopy);
             } finally {
-                durationTime = time[0].responseEnd - time[0].responseStart;
+                endQuery = new Date().getTime();
+                durationTime += (endQuery - startQuery) / 1000;
                 setLoading(false);
             }
         }
