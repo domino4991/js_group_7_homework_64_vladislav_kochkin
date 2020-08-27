@@ -48,4 +48,5 @@
 
 .fr-wrapper {
     height: 150px;
+    overflow: scroll;
 }

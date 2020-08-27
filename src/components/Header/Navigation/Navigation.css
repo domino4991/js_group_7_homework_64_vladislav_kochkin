@@ -19,6 +19,7 @@
     padding: 10px;
     display: block;
     transition: 0.5s;
+    font-weight: bold;
 }
 
 .Nav-menu__link:hover {
