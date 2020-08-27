@@ -15,6 +15,7 @@ const ChangeForm = props => {
                     id="change-form__title"
                     value={props.title}
                     onChange={props.changed}
+                    required
                 />
                 <label htmlFor="change-form__name">Author name</label>
                 <input
@@ -24,6 +25,7 @@ const ChangeForm = props => {
                     id="change-form__name"
                     value={props.name}
                     onChange={props.changed}
+                    required
                 />
                 <label htmlFor="change-form__desc">Description</label>
                 <textarea
@@ -32,6 +34,7 @@ const ChangeForm = props => {
                     name="description"
                     value={props.description}
                     onChange={props.changed}
+                    required
                 />
                 <div className="Change-form__btn-group">
                     <button className="Button" type="submit">Change</button>
@@ -50,6 +53,7 @@ const ChangeForm = props => {
                     className="Change-form__field"
                     type="text"
                     onChange={props.changed}
+                    required
                 />
                 <label htmlFor="change-contacts__email">Email</label>
                 <input
@@ -59,7 +63,9 @@ const ChangeForm = props => {
                     className="Change-form__field"
                     type="text"
                     onChange={props.changed}
-                /><label htmlFor="change-contacts__address">Address</label>
+                    required
+                />
+                <label htmlFor="change-contacts__address">Address</label>
                 <input
                     id="change-contacts__address"
                     name="address"
@@ -67,6 +73,7 @@ const ChangeForm = props => {
                     className="Change-form__field"
                     type="text"
                     onChange={props.changed}
+                    required
                 />
                 <div className="Change-form__btn-group">
                     <button className="Button" type="submit">Change</button>
@@ -79,7 +86,10 @@ const ChangeForm = props => {
     return (
         <>
         {props.show ? (
-                <div className="Change-form__wrapper">
+                <div
+                    className="Change-form__wrapper"
+                    onClick={props.clicked}
+                >
                     {form}
                 </div>
             ) : null}
