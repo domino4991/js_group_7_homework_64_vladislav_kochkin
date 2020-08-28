@@ -15,8 +15,7 @@ const Posts = props => {
                         date={item.date}
                         id={item.id}
                         duration={duration += 0.6}
-                        loading={props.loading}
-                    />).reverse() : <p>Постов нет</p>}
+                    />) : <p>Постов нет</p>}
                 </div>
             </div>
         </section>

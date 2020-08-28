@@ -7,7 +7,7 @@ import ReactHtmlParser from 'react-html-parser';
 import {BiTime} from "react-icons/bi";
 
 const PostThumbnail = props => {
-    let duration = props.duration > 7 ? 1.3 : props.duration;
+    let duration = props.duration > 7 ? 0.6 : props.duration;
 
     return (
         <article className="Post-thumbnail" style={{animationDuration: `${duration}s`}}>
