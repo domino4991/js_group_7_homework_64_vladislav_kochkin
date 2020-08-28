@@ -86,14 +86,16 @@ const ChangeForm = props => {
     return (
         <>
         {props.show ? (
-                <div
-                    className="Change-form__wrapper"
-                    onClick={props.clicked}
-                >
-                    {form}
-                </div>
+                <>
+                    <div
+                        className="Change-form__wrapper"
+                    >
+                        <div className="Backdrop" onClick={props.clicked}/>
+                        {form}
+                    </div>
+                </>
             ) : null}
-            </>
+        </>
     );
 };
 
